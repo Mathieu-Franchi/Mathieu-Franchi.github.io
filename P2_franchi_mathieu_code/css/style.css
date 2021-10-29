@@ -61,8 +61,8 @@ header
 {
 	display: flex;
 	max-width: 992px;
+	width: 100%;
 	
-	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: flex-end;
 	
@@ -72,7 +72,7 @@ header
 	
 	
 	
-	font-size: small;
+	font-size: 12px;
 	
 }
 header h1
@@ -98,7 +98,7 @@ nav
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	align-items: center;
+	align-items: flex-end;
 	
 	
 }
@@ -133,7 +133,7 @@ nav ul li a:hover
 {
    
    font-weight: bolder ;	
-   
+   font-size: 20px;
    margin-bottom: 5px;
    margin-left: 5px;
    
@@ -245,13 +245,10 @@ form p
 	flex-wrap: wrap;
 	flex-direction: row;
 	
-	
-	
-	
 	height: auto;
 	width: 100%;
-	max-width: 768px;
-	min-width: 992px;
+	
+	
 	margin-left: 10px;
     margin-bottom: 20px;
 
@@ -304,6 +301,7 @@ form p
 #filters .filters:hover
 {
    transform: scale(1.10);
+   
 }
 
 
@@ -348,6 +346,15 @@ form p
 	margin-top: 20px;
 	
     
+}
+/** STARS **/
+.blue
+{
+	color: #0065FC;
+}
+.grey
+{
+	color: lightgray;
 }
 /***************** HOUSING HEBERGEMENT ******************/
 #housing
@@ -421,10 +428,7 @@ form p
 	padding-top: 5px;
 }
 
-#housing article i
-{
-	color: #0065FC;
-}
+
 .star_one 
 {
 	letter-spacing: -1px;
@@ -460,6 +464,7 @@ form p
 #housing article:hover
 {
 	transform: scale(1.10);
+	
 }
 
 
@@ -508,14 +513,14 @@ form p
 	transform: scale(1.10);
 }
 
-#mostpopular .star_two
+#mostpopular .star_two 
 {
-	color: #0065FC;
+	
 	letter-spacing: -1px;
 	font-size: small;
 
-	
 }
+
 #mostpopular h2
 {   
 	width: 100%;
@@ -762,9 +767,9 @@ footer
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: center;
-	width: 80%;
+	width: 70%;
 	height: auto;
-	margin-left: 40px;
+	margin-left: 20px;
 	
     
 }
@@ -782,7 +787,7 @@ footer
 	margin-bottom: 20px;
 	margin-top: 40px;
 }
-.ourstays
+.ourhousing
 {
 	margin-bottom: 20px;
 }
@@ -797,7 +802,7 @@ footer a:hover
 }
 footer h2 
 {
-	font-size: 20px;
+	font-size: 18px;
 }
 footer a
 {
@@ -807,7 +812,7 @@ footer a
 
 /***************************** FOOTER ****************************/
 /**************************** MEDIA QUERIES ********************************/
-@media all and (max-width: 992px)
+@media all and (max-width: 991px)
 {
 	#activities #block_activities_two
     {
@@ -816,46 +821,247 @@ footer a
 		
 
 	}
-    
+    #housing
+	{
+		min-width: 600px;
+	}
 }
 
-@media all and (max-width: 768px)
+@media all and (max-width: 767px)
 {
-  #body
+	header 
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	nav
+	{
+		width: 100%;
+		text-align: center;
+	}
+	nav div 
+	{
+		display: flex;
+		width: 100%;
+	}
+	.a-nav
+		
+	{
+		flex:1;
+		border-bottom: 2px solid #f2f2f2;
+	}
+
+    form p  
+	{
+		margin: auto;
+	}
+    /** FILTRES **/
+	#filters
+	{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap !important;
+		width: 50%;
+		margin: auto;
+		margin-bottom: 10px;
+		align-self: flex-start;
+	}
+	.filters
+	{
+          
+	}
+	#filters li:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 15px;
+		font-size: 20px;
+	}
+	#filters li:nth-child(5)
+	{
+		min-width: 200px;
+	}
+
+	/** info **/
+	#info
+	{
+		margin-left: 130px;
+	}
+	/**LES PLUS POPULAIRES **/
+	#mostpopular
+	{
+		
+		width: 100%;
+		background-color: #F2F2F2;
+		display: flex;
+		
+		align-items: center;
+		flex-direction: column;
+		zoom: 1.5;
+		margin: auto;
+		border-radius: 0px 0px 0px 0px;
+	}
+	#mostpopular .fas.fa-chart-line
+	{
+		align-self: center;
+		justify-self: flex-end;
+		
+		
+		
+		
+		
+	}
+	#mostpopular h2
+	{
+		align-self: center;
+		display: flex;
+		
+		flex-direction: row;
+		width: 63%;
+         
+	}
+	
+
+/**HEBERGEMENTS**/
+   #housing
+   {
+	   display: flex;
+	   flex-direction: column;
+	   
+	   height: auto;
+	   width: 400px;
+	   order: 2;
+	   background-color: white;
+	   
+       
+   }
+   #housing article
+   {
+	  width: 400px;
+	  height: 230px;
+   }
+
+   #housing img 
+   {
+	  width: 400px;
+	  height: 150px;
+   }
+   #housing h3
+   {
+	   font-size: 20px;
+   }
+   #housing article p 
+   {
+	   font-size: 15px;
+   }
+   #more
+   {
+	   width: auto;
+	   margin-top: 20px;
+	   align-self: flex-start !important;
+	   font-size: 20px;
+   }
+   #housing h2
+   {
+	   align-self: flex-start !important;
+	   width: auto;
+	   margin-bottom: 20px;
+	   font-size: 25px;
+   }
+
+/** ACTIVITIES **/
+	#activities
   {
 	  display: flex;
-	  align-items: center;
 	  flex-direction: column;
-	  min-width: 768px;
-	  margin: auto;
+	  align-content: center;
+	  
+	  width: 767px;
+	  height: auto;
   }
+  #activities h2
+  {
+      width: 55%;
+	  font-size: 30px;
+	  height: 30px;
+	   
+  }
+  #activities article
+  {
+	  width: 550px;
+	  height: 300px;
+  }
+  #activities img
+  {
+	  width: 550px;
+	  height: 250px;
+  }
+  #activities h3
+  {
+	  font-size: 20px;
+  }
+
+  #block_activities_two
+  {
+    display: flex;
+	flex-direction: column !important;
+  }
+  #card_four
+  {
+	  width: 550px;
+	  height: 300px;
+  }
+  .card_four
+  {
+	  width: 550px;
+	  height: 250px;
+  }
+
+/** FOOTER **/
   footer
   {
-
+        display: flex;
+		flex-direction: column;
+		height: auto;
+		background-color: #f2f2f2;
+		width: 100%;
+		
   }
+  
   #footer
   {
 	  display: flex;
 	  flex-direction: column;
-	  align-items: center;
-	  margin: auto;
-	  padding: 0;
+	  align-items: flex-start;
+	  
+	  min-width: 300px;
+	  width: 100%;
+	  height: 600px;
   }
-  #activities
+  
+
+  footer h2 
   {
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
+	  font-size: 25px;
   }
-  #block_activities_two
+  footer a
   {
-    display: flex;
-	flex-direction: column;
-	align-items: center;
+	font-size: 20px;
   }
-
-
-
+  .about
+  {
+	  margin-bottom: 30px;
+	  margin-top: 40px;
+  }
+  .ourstays
+  {
+	  margin-bottom: 30px;
+  }
+  .assistance
+  {
+	  margin-bottom: 30px;
+  }
 
 }
 	
